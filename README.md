@@ -1,6 +1,8 @@
 SwitchButton
 ============
 
+[![Build Status](https://travis-ci.org/yongjhih/SwitchButton.png?branch=master)](https://travis-ci.org/yongjhih/SwitchButton) [![Stories in Ready](https://badge.waffle.io/yongjhih/SwitchButton.png)](http://waffle.io/yongjhih/SwitchButton)
+
 update 1.2.3
 ---
 *   bug fix
