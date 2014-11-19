@@ -1,7 +1,6 @@
 package com.kyleduo.switchbutton;
 
 import android.content.Context;
-import android.os.Build;
 import android.preference.CheckBoxPreference;
 import android.util.AttributeSet;
 
@@ -27,7 +26,7 @@ public class SwitchButtonPreference extends CheckBoxPreference {
         init();
     }
 
-    private void init() {
+    protected void init() {
         setWidgetLayoutResource(R.layout.preference_switch_button_layout);
     }
 }
