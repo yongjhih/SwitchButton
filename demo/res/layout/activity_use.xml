@@ -23,9 +23,11 @@
             android:gravity="center_vertical"
             android:orientation="horizontal" >
 
-            <com.kyleduo.switchbutton.SwitchButton
+            <com.kyleduo.switchbutton.SwitchMaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/sb_use_listener"
-                style="@style/MaterialDesignStyle" />
+                 />
 
             <TextView
                 android:id="@+id/listener_finish"
@@ -62,9 +64,10 @@
             android:layout_marginTop="8dp"
             android:gravity="center_vertical" >
 
-            <com.kyleduo.switchbutton.SwitchButton
+            <com.kyleduo.switchbutton.SwitchMaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/sb_use_long"
-                style="@style/MaterialDesignStyle"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:focusable="false" />
@@ -94,9 +97,10 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical" >
 
-            <com.kyleduo.switchbutton.SwitchButton
+            <com.kyleduo.switchbutton.SwitchMaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/sb_use_toggle"
-                style="@style/MaterialDesignStyle"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:focusable="false" />
@@ -140,8 +144,9 @@
             android:gravity="center_vertical" >
 
             <com.kyleduo.switchbutton.SwitchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/sb_use_checked"
-                style="@style/MaterialDesignStyle"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:focusable="false" />

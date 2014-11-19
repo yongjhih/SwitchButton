@@ -66,7 +66,7 @@ public class SwitchButton extends CompoundButton {
 		super(context, attrs, defStyle);
 		initView();
 
-		TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SwitchButton);
+		TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SwitchButton, defStyle, R.style.SwitchButtonStyle);
 
 		mConf.setThumbMarginInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_margin, mConf.getDefaultThumbMarginInPixel()));
 		mConf.setThumbMarginInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginTop, mConf.getThumbMarginTop()),
