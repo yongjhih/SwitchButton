@@ -1,5 +1,5 @@
 <resources>
-    <style name="SwitchDefaultButtonStyle">
+    <style name="SwitchNormalButtonStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingLeft">10dp</item>
@@ -8,7 +8,7 @@
         <item name="android:paddingBottom">4dp</item>
     </style>
 
-    <style name="SwitchMaterialButtonStyle" parent="SwitchDefaultButtonStyle">
+    <style name="SwitchMaterialButtonStyle" parent="SwitchNormalButtonStyle">
         <item name="sb_animationVelocity">6</item>
         <item name="sb_insetBottom">10dp</item>
         <item name="sb_insetTop">10dp</item>
@@ -19,5 +19,16 @@
         <item name="sb_onDrawable">@drawable/md_back_on</item>
         <item name="sb_thumbDrawable">@drawable/md_thumb</item>
         <item name="sb_thumb_margin">-17dp</item>
+    </style>
+
+    <style name="SwitchEtchedButtonStyle" parent="SwitchNormalButtonStyle">
+        <item name="sb_animationVelocity">8</item>
+        <item name="sb_offDrawable">@drawable/img_back_off</item>
+        <item name="sb_onDrawable">@drawable/img_back_on</item>
+        <item name="sb_thumbDrawable">@drawable/selector_thumb</item>
+        <item name="sb_thumb_marginBottom">2dp</item>
+        <item name="sb_thumb_marginLeft">3dp</item>
+        <item name="sb_thumb_marginRight">3dp</item>
+        <item name="sb_thumb_marginTop">3dp</item>
     </style>
 </resources>
