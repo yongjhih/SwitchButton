@@ -83,4 +83,40 @@
             app:sb_thumb_marginTop="3dp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <com.kyleduo.switchbutton.SwitchMaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <com.kyleduo.switchbutton.SwitchButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SwitchDefaultButtonStyle"
+            />
+        <com.kyleduo.switchbutton.SwitchMaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SwitchDefaultButtonStyle"
+            />
+        <com.kyleduo.switchbutton.SwitchButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SwitchMaterialButtonStyle"
+            />
+        <com.kyleduo.switchbutton.SwitchMaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SwitchMaterialButtonStyle"
+            />
+    </LinearLayout>
+
 </LinearLayout>

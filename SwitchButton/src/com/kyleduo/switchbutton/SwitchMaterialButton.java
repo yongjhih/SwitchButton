@@ -17,7 +17,7 @@ public class SwitchMaterialButton extends SwitchButton {
 	}
 
 	public SwitchMaterialButton(Context context, AttributeSet attrs) {
-		this(context, attrs, R.style.SwitchButtonStyle_MaterialDesign);
+		this(context, attrs, R.style.SwitchMaterialButtonStyle);
 	}
 
 	public SwitchMaterialButton(Context context) {

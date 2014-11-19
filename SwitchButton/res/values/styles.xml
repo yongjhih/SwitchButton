@@ -1,5 +1,5 @@
 <resources>
-    <style name="SwitchButtonStyle">
+    <style name="SwitchDefaultButtonStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingLeft">10dp</item>
@@ -8,7 +8,7 @@
         <item name="android:paddingBottom">4dp</item>
     </style>
 
-    <style name="SwitchButtonStyle.MaterialDesign" parent="SwitchButtonStyle">
+    <style name="SwitchMaterialButtonStyle" parent="SwitchDefaultButtonStyle">
         <item name="sb_animationVelocity">6</item>
         <item name="sb_insetBottom">10dp</item>
         <item name="sb_insetTop">10dp</item>
