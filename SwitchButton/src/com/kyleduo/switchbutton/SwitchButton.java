@@ -72,21 +72,21 @@ public class SwitchButton extends CompoundButton {
 		}
 		TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SwitchButton, defStyle, style);
 
-		mConf.setThumbMarginInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_margin, mConf.getDefaultThumbMarginInPixel()));
-		mConf.setThumbMarginInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginTop, mConf.getThumbMarginTop()),
-				ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginBottom, mConf.getThumbMarginBottom()),
-				ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginLeft, mConf.getThumbMarginLeft()),
-				ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_marginRight, mConf.getThumbMarginRight()));
-		mConf.setRadius(ta.getInt(R.styleable.SwitchButton_radius, Configuration.Default.DEFAULT_RADIUS));
+		mConf.setThumbMarginInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_thumb_margin, mConf.getDefaultThumbMarginInPixel()));
+		mConf.setThumbMarginInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_thumb_marginTop, mConf.getThumbMarginTop()),
+				ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_thumb_marginBottom, mConf.getThumbMarginBottom()),
+				ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_thumb_marginLeft, mConf.getThumbMarginLeft()),
+				ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_thumb_marginRight, mConf.getThumbMarginRight()));
+		mConf.setRadius(ta.getInt(R.styleable.SwitchButton_sb_radius, Configuration.Default.DEFAULT_RADIUS));
 
-		mConf.setThumbWidthAndHeightInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_width, -1), ta.getDimensionPixelSize(R.styleable.SwitchButton_thumb_height, -1));
+		mConf.setThumbWidthAndHeightInPixel(ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_thumb_width, -1), ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_thumb_height, -1));
 
-		mConf.setMeasureFactor(ta.getFloat(R.styleable.SwitchButton_measureFactor, -1));
+		mConf.setMeasureFactor(ta.getFloat(R.styleable.SwitchButton_sb_measureFactor, -1));
 
-		mConf.setInsetBounds(ta.getDimensionPixelSize(R.styleable.SwitchButton_insetLeft, 0), ta.getDimensionPixelSize(R.styleable.SwitchButton_insetTop, 0),
-				ta.getDimensionPixelSize(R.styleable.SwitchButton_insetRight, 0), ta.getDimensionPixelSize(R.styleable.SwitchButton_insetBottom, 0));
+		mConf.setInsetBounds(ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_insetLeft, 0), ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_insetTop, 0),
+				ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_insetRight, 0), ta.getDimensionPixelSize(R.styleable.SwitchButton_sb_insetBottom, 0));
 
-		int velocity = ta.getInteger(R.styleable.SwitchButton_animationVelocity, -1);
+		int velocity = ta.getInteger(R.styleable.SwitchButton_sb_animationVelocity, -1);
 		mAnimationController.setVelocity(velocity);
 
 		fetchDrawableFromAttr(ta);
@@ -123,9 +123,9 @@ public class SwitchButton extends CompoundButton {
 		if (mConf == null) {
 			return;
 		}
-		mConf.setOffDrawable(fetchDrawable(ta, R.styleable.SwitchButton_offDrawable, R.styleable.SwitchButton_offColor, Configuration.Default.DEFAULT_OFF_COLOR));
-		mConf.setOnDrawable(fetchDrawable(ta, R.styleable.SwitchButton_onDrawable, R.styleable.SwitchButton_onColor, Configuration.Default.DEFAULT_ON_COLOR));
-		mConf.setThumbDrawable(fetchDrawable(ta, R.styleable.SwitchButton_thumbDrawable, R.styleable.SwitchButton_thumbColor, Configuration.Default.DEFAULT_THUMB_COLOR));
+		mConf.setOffDrawable(fetchDrawable(ta, R.styleable.SwitchButton_sb_offDrawable, R.styleable.SwitchButton_sb_offColor, Configuration.Default.DEFAULT_OFF_COLOR));
+		mConf.setOnDrawable(fetchDrawable(ta, R.styleable.SwitchButton_sb_onDrawable, R.styleable.SwitchButton_sb_onColor, Configuration.Default.DEFAULT_ON_COLOR));
+		mConf.setThumbDrawable(fetchDrawable(ta, R.styleable.SwitchButton_sb_thumbDrawable, R.styleable.SwitchButton_sb_thumbColor, Configuration.Default.DEFAULT_THUMB_COLOR));
 	}
 
 	private Drawable fetchDrawable(TypedArray ta, int attrId, int alterColorId, int defaultColor) {
