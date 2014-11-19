@@ -33,18 +33,17 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Checkable;
 import android.widget.CompoundButton;
-import org.jraf.android.backport.switchwidget.TwoStatePreference;
 
 /**
  * A {@link Preference} that provides a two-state toggleable option.
  * <p>
  * This preference will store a boolean into the SharedPreferences.
  * 
- * @attr ref android.R.styleable#SwitchButtonPreference_asb_summaryOff
- * @attr ref android.R.styleable#SwitchButtonPreference_asb_summaryOn
- * @attr ref android.R.styleable#SwitchButtonPreference_asb_switchTextOff
- * @attr ref android.R.styleable#SwitchButtonPreference_asb_switchTextOn
- * @attr ref android.R.styleable#SwitchButtonPreference_asb_disableDependentsState
+ * @attr ref android.R.styleable#SwitchButtonPreference_switchbutton_summaryOff
+ * @attr ref android.R.styleable#SwitchButtonPreference_switchbutton_summaryOn
+ * @attr ref android.R.styleable#SwitchButtonPreference_switchbutton_switchTextOff
+ * @attr ref android.R.styleable#SwitchButtonPreference_switchbutton_switchTextOn
+ * @attr ref android.R.styleable#SwitchButtonPreference_switchbutton_disableDependentsState
  */
 public class SwitchButtonPreference extends TwoStatePreference {
 	// SwitchButton text for on and off states
@@ -81,14 +80,14 @@ public class SwitchButtonPreference extends TwoStatePreference {
 		super(context, attrs, defStyle);
 
 		TypedArray a = context.obtainStyledAttributes(attrs,
-				R.styleable.SwitchButtonPreference, R.attr.asb_switchPreferenceStyle, 0);
-		setSummaryOn(a.getString(R.styleable.SwitchButtonPreference_asb_summaryOn));
-		setSummaryOff(a.getString(R.styleable.SwitchButtonPreference_asb_summaryOff));
-		setSwitchTextOn(a.getString(R.styleable.SwitchButtonPreference_asb_switchTextOn));
+				R.styleable.SwitchButtonPreference, R.attr.switchbutton_switchPreferenceStyle, 0);
+		setSummaryOn(a.getString(R.styleable.SwitchButtonPreference_switchbutton_summaryOn));
+		setSummaryOff(a.getString(R.styleable.SwitchButtonPreference_switchbutton_summaryOff));
+		setSwitchTextOn(a.getString(R.styleable.SwitchButtonPreference_switchbutton_switchTextOn));
 		setSwitchTextOff(a
-				.getString(R.styleable.SwitchButtonPreference_asb_switchTextOff));
+				.getString(R.styleable.SwitchButtonPreference_switchbutton_switchTextOff));
 		setDisableDependentsState(a.getBoolean(
-				R.styleable.SwitchButtonPreference_asb_disableDependentsState, false));
+				R.styleable.SwitchButtonPreference_switchbutton_disableDependentsState, false));
 		a.recycle();
 	}
 
@@ -101,7 +100,7 @@ public class SwitchButtonPreference extends TwoStatePreference {
 	 *            Style attributes that differ from the default
 	 */
 	public SwitchButtonPreference(Context context, AttributeSet attrs) {
-		this(context, attrs, R.attr.asb_switchPreferenceStyle);
+		this(context, attrs, R.attr.switchbutton_switchPreferenceStyle);
 	}
 
 	/**
@@ -128,8 +127,6 @@ public class SwitchButtonPreference extends TwoStatePreference {
 
 			// if (checkableView instanceof SwitchButton) {
 				final SwitchButton switchView =/* (SwitchButton) */ checkableView;
-				switchView.setTextOn(mSwitchOn);
-				switchView.setTextOff(mSwitchOff);
 				switchView.setOnCheckedChangeListener(mListener);
 			// }
 		}
