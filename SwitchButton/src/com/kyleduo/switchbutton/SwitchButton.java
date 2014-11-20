@@ -150,7 +150,7 @@ public class SwitchButton extends CompoundButton {
 		mAnimationController.setVelocity(mConf.getVelocity());
 		this.requestLayout();
 		setup();
-		setCheckedWithoutAnimation(mIsChecked);
+		setChecked(mIsChecked);
 	}
 
 	/**
@@ -443,16 +443,12 @@ public class SwitchButton extends CompoundButton {
 		}
 	}
 
-	public void setCheckedWithoutAnimation(final boolean checked) {
+	@Override
+	public void setChecked(final boolean checked) {
 		if (mThumbZone != null) {
 			moveThumb(checked ? getMeasuredWidth() : -getMeasuredWidth());
 		}
 		setCheckedInClass(checked);
-	}
-
-	@Override
-	public void setChecked(final boolean checked) {
-		slideToChecked(checked);
 	}
 
 	@Override
@@ -469,7 +465,7 @@ public class SwitchButton extends CompoundButton {
 		if (animated) {
 			slideToChecked(!mIsChecked);
 		} else {
-			setCheckedWithoutAnimation(!mIsChecked);
+			setChecked(!mIsChecked);
 		}
 	}
 
