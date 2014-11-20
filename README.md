@@ -3,6 +3,108 @@ SwitchButton
 
 [![Build Status](https://travis-ci.org/yongjhih/SwitchButton.png?branch=master)](https://travis-ci.org/yongjhih/SwitchButton) [![Stories in Ready](https://badge.waffle.io/yongjhih/SwitchButton.png)](http://waffle.io/yongjhih/SwitchButton)
 
+![default_style](https://raw.githubusercontent.com/kyleduo/SwitchButton/master/preview/default_style.png)
+
+New Style with Material Design (v1.2, 11/08/2014):
+
+![easy_to_use](https://raw.githubusercontent.com/kyleduo/SwitchButton/master/preview/easy_to_use.png)
+
+Styles:
+
+![demo_preview](https://raw.githubusercontent.com/kyleduo/SwitchButton/master/preview/easy_to_style.png)
+
+***
+Usage
+---
+
+In Preference:
+
+* Default Style:
+
+```xml
+<com.kyleduo.switchbutton.SwitchButtonPreference
+    android:key="example_checkbox"
+    android:title="@string/pref_title_example"
+    android:summary="@string/pref_description_example"
+    android:defaultValue="true" />
+```
+
+* Material Style:
+
+```xml
+<com.kyleduo.switchbutton.SwitchMaterialButtonPreference
+    android:key="example_checkbox"
+    android:title="@string/pref_title_example"
+    android:summary="@string/pref_description_example"
+    android:defaultValue="true" />
+```
+
+* Etched Style:
+
+```xml
+<com.kyleduo.switchbutton.SwitchEtchedButtonPreference
+    android:key="example_checkbox"
+    android:title="@string/pref_title_example"
+    android:summary="@string/pref_description_example"
+    android:defaultValue="true" />
+```
+
+Widgets in layout:
+
+```xml
+<com.kyleduo.switchbutton.SwitchButton
+    android:id="@android:id/switch_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+```
+
+```xml
+<com.kyleduo.switchbutton.SwitchMaterialButton
+    android:id="@+id/switch_material_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+```
+
+```xml
+<com.kyleduo.switchbutton.SwitchEtchedButton
+    android:id="@+id/switch_etched_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+```
+
+```java
+SwitchButton switchMaterialButton = (SwitchButton) findViewById(R.switch_material_button);
+switchMaterialButton.slideToChecked(true) // animate to ON
+switchMaterialButton.toggle() // animate toggle
+switchMaterialButton.toggle(false) // toggle without animation
+switchMaterialButton.setChecked(false) // OFF without animation
+```
+
+***
+Attributes
+---
+
+In xml layout file, you can configure the face of switch button using these attrs.
+
+*   __onDrawable__: drawable of background for status ON
+*   __offDrawable__: drawable of background for status OFF
+*   __thumbDrawable__: drawable of thumb
+*   __thumb_margin__: set inner margin between thumb and edges
+*   __thumb_marginLeft/Top/Bottom/Right__: set margin for specific edge
+*   __thumb_width__: set the width of thumb, probably used for gradient drawable
+*   __thumb_height__: set the height of thumb
+*   __onColor__: set the color of status ON, usd for flat version, the priority is below of onDrawable
+*   __offColor__: like the onColor
+*   __thumbColor__: like the onColor
+*   __thumbPressedColor__: like the thumbColor, but for pressed status
+*   __animationVelocity__: distance of animation per frame
+*   __radius__: used for color version, radius of corner of background and thumb.
+*   __measureFactor__: factor limit the minimum width equals almost (the height of thumb * measureFactor)
+
+***
 update 1.2.3
 ---
 *   bug fix
@@ -63,35 +165,6 @@ new default style and demo apk looks like this:
 Update
 ---
 Add an attr of radius, now you can change the radius when configure the button's face!
-***
-Usage
----
-In xml layout file, you can configure the face of switch button using these attrs.
-
-*   __onDrawable__: drawable of background for status ON
-*   __offDrawable__: drawable of background for status OFF
-*   __thumbDrawable__: drawable of thumb
-*   __thumb_margin__: set inner margin between thumb and edges
-*   __thumb_marginLeft/Top/Bottom/Right__: set margin for specific edge
-*   __thumb_width__: set the width of thumb, probably used for gradient drawable
-*   __thumb_height__: set the height of thumb
-*   __onColor__: set the color of status ON, usd for flat version, the priority is below of onDrawable
-*   __offColor__: like the onColor
-*   __thumbColor__: like the onColor
-*   __thumbPressedColor__: like the thumbColor, but for pressed status
-*   __animationVelocity__: distance of animation per frame
-*   __radius__: used for color version, radius of corner of background and thumb.
-*   __measureFactor__: factor limit the minimum width equals almost (the height of thumb * measureFactor)
-
-In Preference
-
-```xml
-<com.kyleduo.switchbutton.SwitchButtonPreference
-    android:key="example_checkbox"
-    android:title="@string/pref_title_example"
-    android:summary="@string/pref_description_example"
-    android:defaultValue="true" />
-```
 
 ***
 Original
