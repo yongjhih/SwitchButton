@@ -85,10 +85,13 @@ public class SwitchButton extends CompoundButton {
 
 		int velocity = ta.getInteger(R.styleable.SwitchButton_sb_animationVelocity, -1);
 		mAnimationController.setVelocity(velocity);
+		mClickable = ta.getBoolean(R.styleable.SwitchButton_sb_clickable, true);
 
 		fetchDrawableFromAttr(ta);
 		ta.recycle();
 	}
+
+        private boolean mClickable = true;
 
 	public SwitchButton(Context context, AttributeSet attrs) {
 		this(context, attrs, 0);
@@ -373,7 +376,7 @@ public class SwitchButton extends CompoundButton {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-
+		if (!mClickable) return false;
 		if (isAnimating || !isEnabled()) {
 			return false;
 		}

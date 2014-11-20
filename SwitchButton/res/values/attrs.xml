@@ -23,6 +23,7 @@
         <attr name="sb_insetRight" format="dimension|reference" />
         <attr name="sb_insetTop" format="dimension|reference" />
         <attr name="sb_insetBottom" format="dimension|reference" />
+        <attr name="sb_clickable" format="boolean|reference" />
     </declare-styleable>
 
 </resources>
