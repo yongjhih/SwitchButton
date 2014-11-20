@@ -29,7 +29,7 @@ import com.kyleduo.switchbutton.AnimationController.OnAnimateListener;
  */
 
 public class SwitchButton extends CompoundButton {
-	private static boolean SHOW_RECT = false;
+	private static final boolean SHOW_RECT = false;
 
 	private boolean mIsChecked = false;
 
