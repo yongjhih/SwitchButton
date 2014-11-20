@@ -3,4 +3,6 @@
     android:id="@android:id/checkbox"
     android:layout_width="30dp"
     android:layout_height="30dp"
+    android:background="@null"
+    android:clickable="false"
     android:focusable="false" />
