@@ -77,10 +77,11 @@ Widgets in layout:
 
 ```java
 SwitchButton switchMaterialButton = (SwitchButton) findViewById(R.switch_material_button);
-switchMaterialButton.slideToChecked(true) // animate to ON
-switchMaterialButton.toggle() // animate toggle
-switchMaterialButton.toggle(false) // toggle without animation
-switchMaterialButton.setChecked(false) // OFF without animation
+
+switchMaterialButton.slideToChecked(true); // animate to ON
+switchMaterialButton.toggle(); // animate toggle
+switchMaterialButton.toggle(false); // toggle without animation
+switchMaterialButton.setChecked(false); // OFF without animation
 ```
 
 ***
@@ -103,6 +104,10 @@ In xml layout file, you can configure the face of switch button using these attr
 *   __animationVelocity__: distance of animation per frame
 *   __radius__: used for color version, radius of corner of background and thumb.
 *   __measureFactor__: factor limit the minimum width equals almost (the height of thumb * measureFactor)
+
+***
+Changlog
+---
 
 ***
 update 1.2.3
